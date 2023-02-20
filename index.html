@@ -1,93 +1,81 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fork Me! FCC: Test Suite Template</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-body {
-  margin-top: 4rem;
-  width: 100vw;
-  color: white;
-  background-color: blueviolet;
-  font-family: sans-serif;
-}
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
-header {
-  margin: 1rem auto;
-  text-align: center;
-}
-
-#title {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-#survey-form {
-  width: 80vw;
-  padding: 2rem;
-  margin: 1rem auto;
-  border-radius: 0.5rem;
-  background-color: rgba(106, 0, 106, 0.807);
-}
-
-/* label {
-  padding-left: 0.1rem;
-  margin: 1rem 0;
-} */
-section > input {
-  display: block;
-  margin: 0.1rem 0 0.8rem 0;
-  padding: 0.5rem 0.3rem;
-  border-radius: 0.3rem;
-  border: solid 1px white;
-  width: 100%;
-  color: black;
-  background-color: white;
-  box-sizing: border-box;
-}
-
-#dropdown-box {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem auto;
-}
-
-#dropdown {
-  margin-left: 1rem;
-}
-
-.first--radios-box {
-  display: flex;
-}
-
-.radios,
-.checkboxes {
-  margin-right: 1rem;
-}
-
-.p-header {
-  margin: 0.5rem 0;
-}
-
-textarea {
-  width: 100%;
-  margin: 0.5rem auto;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
-}
-
-#submit-box {
-  text-align: center;
-}
-
-#submit {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: solid 2px purple;
-}
-
-#submit:hover {
-  background-color: grey;
-  color: white;
-}
+    <header>
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve the platform
+      </p>
+    </header>
+    <main>
+      <form action="" id="survey-form">
+        <section>
+          <label for="name" id="name-label">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Please enter your name here"
+            required
+          />
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label for="" id="number-label">Age</label>
+          <input
+            type="number"
+            id="number"
+            min="1"
+            max="100"
+            placeholder="Enter your age"
+          />
+        </section>
+        <div id="dropdown-box">
+          <label for="">Which Option best describes your role</label>
+          <select name="" id="dropdown">
+            <option value="">Student</option>
+            <option value="">Full-time Job</option>
+          </select>
+        </div>
+        <p class="p-header">Would you recommend freeCodeCamp to a friend?</p>
+        <!-- <div class="first--radios-box"></div> -->
+        <div class="first--radios-box">
+          <input type="radio" name="select" class="radios" value="Maybe" />
+          <p>Definitely</p>
+        </div>
+        <div class="first--radios-box">
+          <input type="radio" name="select" class="radios" value="Maybe" />
+          <p>Maybe</p>
+        </div>
+        <p class="p-header">
+          What would you like to see improved? (Check all that apply)
+        </p>
+        <div class="checkboxes">
+          <input type="checkbox" value="Wiki" /> Wiki
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" value="Videos" /> Videos
+        </div>
+        <textarea name="" id="" cols="30" rows="10">
+Any comments or suggestions?</textarea
+        >
+        <div id="submit-box">
+          <input type="submit" id="submit" value="Submit" />
+        </div>
+      </form>
+    </main>
+    <footer></footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
